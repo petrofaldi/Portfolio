@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Submission : Tugas Akhir Membuat Website</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <h1><a href="">Aldi Petrof</a></h1>
+        <ul class="navbar-menu" id="navbarMenu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#tentang">Tentang</a></li>
+          <li><a href="#galeri">Galeri</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <article class="content" id="home">
+        <aside>
+          <div class="info">
+            <img src="assets/img/profil.jpg" alt="Aldi Petrof" />
+          </div>
+          <div class="social-media">
+            <ul>
+              <li>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="far fa-envelope"></i></a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+        <div class="deskripsi">
+          <h2 class="judul">Tentang Saya</h2>
+          <p>
+            Hai, selamat datang di website pribadi saya. seorang pemula dalam
+            pengembangan web. saya memiliki minat yang besar dalam eksplorasi
+            dan belajar hal-hal baru tentang pengembangan web. Terima kasih atas
+            kunjungan anda.
+          </p>
+          <button onclick="scrollKeElemen('kontak')">Kontak Saya</button>
+        </div>
+      </article>
+      <article class="tentang" id="tentang">
+        <h3 class="judul">Tentang</h3>
+        <hr />
+        <p class="deskripsi">
+          Hai, saya Aldi Petrof, seorang Pegawai Negeri Sipil (PNS) yang
+          memiliki minat yang besar dalam dunia pemrograman web. Saya percaya
+          bahwa pemrograman web adalah salah satu kunci untuk mengembangkan
+          solusi teknologi yang inovatif dan berdaya guna. Sebagai seorang PNS,
+          saya telah mendedikasikan diri saya untuk memberikan pelayanan yang
+          terbaik bagi masyarakat. Namun, di sela-sela kesibukan sebagai PNS,
+          saya juga mengalokasikan waktu untuk belajar dan mengembangkan
+          keterampilan saya dalam pemrograman web. Saya percaya bahwa
+          pemrograman web adalah keterampilan yang penting dalam era digital
+          ini. Dengan penguasaan pemrograman web, saya ingin memberikan
+          kontribusi lebih banyak dalam pengembangan aplikasi dan sistem
+          informasi yang bermanfaat bagi masyarakat dan instansi tempat saya
+          bekerja. Saat ini, saya sedang aktif belajar melalui berbagai sumber
+          belajar online dan proyek-proyek pemrograman web mandiri. Saya
+          berharap dapat terus mengembangkan keterampilan saya dalam pemrograman
+          web dan memberikan kontribusi yang lebih besar di masa depan.
+        </p>
+      </article>
+      <article class="galeri" id="galeri">
+        <h2>Galeri</h2>
+        <hr />
+        <div class="slider-container">
+          <div class="slider">
+            <div class="slide">
+              <img src="assets/img/slide/gambar1.jpg" alt="Gambar 1" />
+            </div>
+            <div class="slide">
+              <img src="assets/img/slide/gambar2.jpg" alt="Gambar 2" />
+            </div>
+            <div class="slide">
+              <img src="assets/img/slide/gambar3.jpg" alt="Gambar 3" />
+            </div>
+            <div class="slide">
+              <img src="assets/img/slide/gambar4.jpg" alt="Gambar 3" />
+            </div>
+          </div>
+          <button class="prev" onclick="prevSlide()">&#10094;</button>
+          <button class="next" onclick="nextSlide()">&#10095;</button>
+        </div>
+      </article>
+      <article id="kontak" class="kontak">
+        <div class="form">
+          <h2>Kontak Saya</h2>
+          <hr />
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="nama">Nama:</label>
+              <input type="text" id="nama" name="nama" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="pesan">Pesan:</label>
+              <textarea id="pesan" name="pesan" required></textarea>
+            </div>
+            <div class="form-group">
+              <input type="submit" value="Kirim Pesan" />
+            </div>
+          </form>
+        </div>
+      </article>
+    </main>
+    <footer>
+      <p>&copy; 2024 | Aldi Petrof</p>
+      <div class="social-media">
+        <ul>
+          <li>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="far fa-envelope"></i></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
