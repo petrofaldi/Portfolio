@@ -1,25 +1,20 @@
+* {
+  box-sizing: border-box;
+}
 body {
   font-family: "Poppins";
-  width: 100dvw;
   padding: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
   background-color: #fbf3d5;
-  background-image: url("../img/bg.jpg");
-  background-size: contain;
 }
 
 /* Header */
 header {
   width: 100%;
   display: flex;
-  justify-content: space-between;
   color: #333;
-  background-color: #efbc9b;
-  box-shadow: 10px 10px 90px #bebebe;
-  position: fixed;
-  z-index: 999;
 }
 
 .navbar {
@@ -32,41 +27,28 @@ header {
 .navbar-menu {
   display: flex;
   list-style-type: none;
-  padding-inline: 4rem;
-  gap: 2rem 1rem;
 }
 
-nav h1 {
-  padding-inline: 4rem;
-}
-
-nav h1 a {
+.navbar h1 a {
   font-size: 24px;
   font-weight: 700;
   text-decoration: none;
   color: #333;
 }
 
-nav ul {
-  display: flex;
-  padding-inline: 4rem;
-  gap: 2rem 1rem;
-  align-items: center;
-}
-
-nav ul li a {
+.navbar ul li a {
   font-size: 18px;
   font-weight: 400;
   text-decoration: none;
   padding: 0.5rem 1rem;
   color: #333;
+  transition: all 0.5s ease-in-out;
 }
 
-nav ul li a:hover {
+.navbar ul li a:hover {
   color: white;
   background-color: #333;
-  border-radius: 50px 0;
-  transition: 1s;
+  border-radius: 30px 0;
 }
 
 .navbar-toggle {
@@ -118,25 +100,28 @@ main aside {
   background-color: #efbc9b;
   padding: 1rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10%;
+  border-radius: 1rem;
   display: flex;
   flex-direction: column;
 }
 
 aside .info {
+  margin: 0 auto;
   display: flex;
   justify-content: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  transition: 1s;
 }
 
 aside .info img {
-  max-width: 50%;
-  height: auto;
+  width: 100%;
   border-radius: 50%;
 }
 
-aside .info img:hover {
+aside .info:hover {
   transform: scale(1.1);
-  transition: 1s;
 }
 
 aside .social-media {
@@ -147,14 +132,6 @@ aside .social-media {
 .social-media .info {
   height: 5rem;
   width: 6rem;
-}
-
-.social-media .info img {
-  display: flex;
-  align-items: center;
-  margin: auto;
-  width: 5rem;
-  height: 5rem;
 }
 
 aside .social-media ul {
@@ -278,7 +255,7 @@ main .kontak {
 }
 
 .form {
-  width: 70dvw;
+  width: 600px;
 }
 
 .form h2 {
@@ -367,49 +344,41 @@ footer .social-media ul li a i:hover {
 
 @media only screen and (max-width: 600px) {
   header {
-    position: relative;
-    padding: 1rem 0;
+    flex-wrap: wrap;
   }
 
-  nav h1 {
+  .navbar h1 {
     padding-inline: 0;
     margin: 0;
   }
 
-  nav {
+  .navbar {
     flex-wrap: wrap;
     justify-content: center;
   }
 
-  nav h1 {
+  .navbar .navbar-menu {
     padding-inline: 0;
-  }
-
-  .navbar-menu {
-    padding-inline: 0;
-    gap: 1rem;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
   }
 
-  nav ul {
-    padding-inline: 1rem 1rem;
-    gap: 1rem;
-  }
-
-  nav ul li a {
+  .navbar .navbar-menu li a {
     padding: 0;
   }
 
   main .content {
     text-align: center;
     flex-direction: column;
+    gap: 0;
+    padding: 0;
   }
 
   main aside {
-    position: relative;
-    width: 100dvw;
-    border-radius: 0%;
+    width: 100%;
+    border-radius: 0;
     right: 0;
     padding: 0;
     background-color: #fbf3d5;
@@ -422,10 +391,11 @@ footer .social-media ul li a i:hover {
 
   main .tentang {
     min-height: 70dvh;
+    padding: 1rem;
   }
 
   main .tentang p {
-    padding: 1rem;
+    text-align: justify;
   }
 
   main .galeri {
@@ -435,7 +405,7 @@ footer .social-media ul li a i:hover {
   .galeri .slider-container {
     position: relative;
     max-height: auto;
-    width: 100dvw;
+    width: 100%;
     overflow: hidden;
     border-radius: 0;
   }
@@ -443,12 +413,12 @@ footer .social-media ul li a i:hover {
   .galeri .slider-container {
     position: relative;
     max-height: auto;
-    max-width: 100dvw;
+    max-width: 100%;
     overflow: hidden;
   }
 
   .slide img {
-    max-width: 100dvw;
+    max-width: 100%;
     height: auto;
   }
 
@@ -457,7 +427,7 @@ footer .social-media ul li a i:hover {
   }
 
   .form {
-    width: 80dvw;
+    width: 100%;
   }
 }
 
